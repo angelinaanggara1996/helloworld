@@ -1,0 +1,40 @@
+package com.javaeee.helloworld;
+
+import com.javaeee.helloworld.health.TemplateHealthCheck;
+import com.javaeee.helloworld.resources.HelloWorldResource;
+
+import io.dropwizard.Application;
+import io.dropwizard.setup.Bootstrap;
+import io.dropwizard.setup.Environment;
+
+public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
+
+    public static void main(String[] args) throws Exception {
+        new HelloWorldApplication().run(args);
+    }
+
+    @Override
+    public String getName() {
+        return "HelloWorld"; //website name
+    }
+
+    @Override
+    public void initialize(Bootstrap<HelloWorldConfiguration> bootstrap) {
+        // TODO: application initialization
+    }
+
+    @Override
+    public void run (HelloWorldConfiguration configuration,
+                     Environment environment) {
+        // TODO: implement application
+    	final HelloWorldResource resource = new HelloWorldResource(
+    	        configuration.getTemplate(),
+    	        configuration.getDefaultName(), configuration.getDefaultAddr()
+    	);
+    	final TemplateHealthCheck healthCheck = new TemplateHealthCheck(configuration.getTemplate());
+    	
+    	environment.healthChecks().register("template", healthCheck);
+    	environment.jersey().register(resource);
+    }
+
+}

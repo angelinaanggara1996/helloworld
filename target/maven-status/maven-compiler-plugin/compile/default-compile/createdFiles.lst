@@ -1,0 +1,5 @@
+com\javaeee\helloworld\api\Saying.class
+com\javaeee\helloworld\health\TemplateHealthCheck.class
+com\javaeee\helloworld\HelloWorldApplication.class
+com\javaeee\helloworld\HelloWorldConfiguration.class
+com\javaeee\helloworld\resources\HelloWorldResource.class

@@ -1,0 +1,8 @@
+template: Hello, %s %s!
+defaultName: Stranger
+defaultAddr: NONE
+
+logging:
+  level: INFO
+  loggers:
+    com.javaeee: DEBUG

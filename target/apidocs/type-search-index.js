@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.javaeee.helloworld","l":"HelloWorldApplication"},{"p":"com.javaeee.helloworld","l":"HelloWorldConfiguration"},{"p":"com.javaeee.helloworld.resources","l":"HelloWorldResource"},{"p":"com.javaeee.helloworld.api","l":"Saying"},{"p":"com.javaeee.helloworld.health","l":"TemplateHealthCheck"}]
